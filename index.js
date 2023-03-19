@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const PORT = 3080;
+// const 3000 = 3080;
 
 app.use(bodyParser.json());
 app.use(cors())
@@ -84,6 +84,6 @@ app.post("/image", upload.single("image"), async (req, res) => {
 })
 
 
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}  // Start server`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`http://localhost:3000  // Start server`);
 });
