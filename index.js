@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// const 3000 = 3080;
+// const 3080 = 3080;
 
 app.use(bodyParser.json());
 app.use(cors())
@@ -83,6 +83,6 @@ app.post("/image", upload.single("image"), async (req, res) => {
   }
 })
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`http://localhost:3000  // Start server`);
+app.listen(process.env.PORT || 3080, () => {
+  console.log(`http://localhost:3080  // Start server`);
 });
