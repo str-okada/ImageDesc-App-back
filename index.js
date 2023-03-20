@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// const 3080 = 3080;
+// const PORT = 3080;
 
 app.use(bodyParser.json());
 app.use(cors())
@@ -73,7 +73,7 @@ app.post("/image", upload.single("image"), async (req, res) => {
 
 
     // モデルを使った処理
-    const predictions = await model.classify(resizedTensor);
+    const predictions = await model.classify(scaledImage);
     const predictedClass = predictions[0].className;
 
     // return the result in JSON format
@@ -86,3 +86,7 @@ app.post("/image", upload.single("image"), async (req, res) => {
 app.listen(process.env.PORT || 3080, () => {
   console.log(`http://localhost:3080  // Start server`);
 });
+
+
+// process.env.PORT
+
