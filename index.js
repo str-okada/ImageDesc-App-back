@@ -80,7 +80,7 @@ app.post("/image", upload.single("image"), async (req, res) => {
   }
 })
 
-app.listen(process.env.RENDPORT || 3080, () => {
+app.listen(process.env.PORT || 3080, () => {
   console.log(`http://localhost:3080  // Start server`);
 });
 
