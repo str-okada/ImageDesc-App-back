@@ -13,9 +13,6 @@ app.use(cors());
 
 // const PORT = 3080;
 
-app.use(bodyParser.json());
-app.use(cors())
-
 
 // open ai
 const { Configuration, OpenAIApi } = require("openai");
